@@ -68,6 +68,7 @@ public class DataController {
                     .put("aircraft", aviation.aircraft())
                     .put("Airport", aviation.airport())
                     .put("Metar", aviation.METAR())
+
             );
 
         }
