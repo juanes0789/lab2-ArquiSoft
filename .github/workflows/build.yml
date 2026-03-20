@@ -114,7 +114,12 @@ jobs:
 
 
 
+      - name: Build Docker image (sin push)
+        if: ${{ secrets.DOCKER_USERNAME == '' || secrets.DOCKER_PASSWORD == '' }}
+        run: docker build -f Dockerfile -t juanmosquerap/lab22026:latest .
+
       - name: Build & push Docker image
+        if: ${{ secrets.DOCKER_USERNAME != '' && secrets.DOCKER_PASSWORD != '' }}
         uses: mr-smithers-excellent/docker-build-push@v6
         with:
           image: juanmosquerap/lab22026
@@ -122,4 +127,4 @@ jobs:
           registry: docker.io
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
-          password: ${{ secrets.DOCKER_PASSWORD }}
+          password: ${{ secrets.DOCKER_TOKEN }}
