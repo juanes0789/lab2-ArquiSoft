@@ -1,6 +1,6 @@
 # lab2-ArquiSoft
 [![CI/CD Pipeline](https://github.com/juanes0789/lab2-ArquiSoft/actions/workflows/build.yml/badge.svg)](https://github.com/juanes0789/lab2-ArquiSoft/actions/workflows/build.yml)
-
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=juanes0789_lab2-ArquiSoft&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=juanes0789_lab2-ArquiSoft)
 
 Implementation of a Simple App with the next operations:
 
